@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Kufam:wght@700&family=Tajawal:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Tajawal", sans-serif;
+  background: #1f2029;
+
+}
+
+::-webkit-scrollbar{
+  width: 5.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: whitesmoke; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darkgray; 
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #f0f4f8;
+}
+
+h1 span {
+  color: #ffdcb7;
+}
+
+h2 {
+  color: #243b53;
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #2b4561;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 2rem;
+  width: 40%;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #d5d5d5;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #345375;
+  line-height: 2;
+}
+
+
+
+/*** Nav Section ***/
+.nav-container {
+  position: fixed;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+nav .logo {
+  padding-top: 30px;
+}
+
+nav .language{
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffeba7;
+  padding: 30px;
+  transition: all .25s;
+}
+
+nav .language:hover{
+  text-decoration: none;
+  font-size: 20px;
+  color: #4264d1;
+  transition: all .25s;
+}
+
+
+
+/* Hero Section */
+
+.mainSection{
+  padding: 200px 200px;
+}
+
+.mainSection:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  right: 0;
+  background: url(/img/pattern_bg.png);
+  opacity: 30%;
+
+} 
+
+/*** Login Form ***/
+ 
+
+.contactForm{
+  margin: auto;
+  padding: 20px;
+  width: 500px;
+  height: 300px;
+  max-width: 500px;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb( 33, 41, 66 );
+  border-radius: 9px;
+  border-top: 10px solid #a89969;
+  border-bottom: 10px solid #a89969;
+  box-shadow: 1px 1px 108.8px 19.2px rgb(25,31,53);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
+  background-position: bottom center;
+  background-size: 300%;
+}
+
+
+
+.contactForm h2{
+  text-align: center;
+  font-size: 2em;
+  color: #ffeba7;
+
+}
+
+
+.home{
+  position: relative;
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  font-size: 12px;
+  color: #ffffff;
+  transition: all .25s;
+}
+  
+.home:hover{
+  color: #ffeba7;
+  transition: all .25s;
+}
+
+
+
+/*** Other Sizes Settings ***/
+
+
+
+@media screen and (max-width:688px){
+  nav{display: none;}
+  .mainSection{display: none;}
+  body{background: url(/img/under-construction2.png); background-size: 91.8%;}
+}
+
