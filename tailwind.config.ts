@@ -3,11 +3,8 @@ import type { Config } from "tailwindcss"
 const config: Config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
   theme: {
@@ -110,31 +107,58 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-in": {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
+        "fade-in-up": {
+          from: { 
+            opacity: "0", 
+            transform: "translateY(20px)" 
+          },
+          to: { 
+            opacity: "1", 
+            transform: "translateY(0)" 
+          },
         },
         "slide-in": {
-          from: { opacity: "0", transform: "translateX(-20px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
+          from: { 
+            opacity: "0", 
+            transform: "translateX(-20px)" 
+          },
+          to: { 
+            opacity: "1", 
+            transform: "translateX(0)" 
+          },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out",
+        "fade-in-up": "fade-in-up 0.8s ease-out",
         "slide-in": "slide-in 0.6s ease-out",
         float: "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse 2s ease-in-out infinite",
+        shimmer: "shimmer 2s ease-in-out infinite",
       },
       backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "olive-gradient": "linear-gradient(135deg, #6B7C32 0%, #8BA85C 50%, #9CAF5F 100%)",
         "sage-gradient": "linear-gradient(135deg, #878F65 0%, #A1A982 50%, #BFC5A8 100%)",
-        "hero-pattern":
-          "radial-gradient(circle at 20% 80%, rgba(107, 124, 50, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(156, 175, 95, 0.1) 0%, transparent 50%)",
+        "hero-pattern": "radial-gradient(circle at 20% 80%, rgba(107, 124, 50, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(156, 175, 95, 0.1) 0%, transparent 50%)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        arabic: ['Cairo', 'system-ui', 'sans-serif'],
       },
     },
   },

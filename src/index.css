@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Modern Olive Green Design System */
+.olive-gradient {
+  background: linear-gradient(135deg, #6b7c32 0%, #8ba85c 50%, #9caf5f 100%);
+}
+
+.sage-gradient {
+  background: linear-gradient(135deg, #878f65 0%, #a1a982 50%, #bfc5a8 100%);
+}
+
+.hero-bg {
+  background: radial-gradient(circle at 20% 80%, rgba(107, 124, 50, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(156, 175, 95, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, #f7f8f3 0%, #ffffff 100%);
+}
+
+.glass-olive {
+  background: rgba(247, 248, 243, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(107, 124, 50, 0.1);
+}
+
+.modern-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9f4 100%);
+  border: 1px solid rgba(107, 124, 50, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(107, 124, 50, 0.1), 0 2px 4px -1px rgba(107, 124, 50, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(107, 124, 50, 0.1), 0 4px 6px -2px rgba(107, 124, 50, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Button hover text visibility fixes */
+.btn-olive-gradient {
+  background: linear-gradient(135deg, #6b7c32 0%, #8ba85c 50%, #9caf5f 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-olive-gradient:hover {
+  background: linear-gradient(135deg, #556329 0%, #6b7c47 50%, #829856 100%);
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-olive {
+  border: 2px solid #6b7c32;
+  color: #6b7c32;
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-outline-olive:hover {
+  background: #6b7c32;
+  color: white !important;
+  border-color: #6b7c32;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Text gradient for olive theme */
+.text-gradient-olive {
+  background: linear-gradient(135deg, #6b7c32 0%, #9caf5f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f8f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6b7c32, #9caf5f);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #556329, #829856);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  button, .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .touch-none {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Focus indicators */
+.focus-visible {
+  outline: 2px solid #6b7c32;
+  outline-offset: 2px;
+}
