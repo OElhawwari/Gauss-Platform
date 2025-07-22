@@ -30,7 +30,9 @@
     "contact": "اتصل بنا",
     "logout": "تسجيل الخروج",
     "signIn": "تسجيل الدخول",
-    "getStarted": "ابدأ الآن"
+    "getStarted": "ابدأ الآن",
+    "gauss":"جاوس",
+    "platform":"منصة"
   },
   "auth": {
     "login": "تسجيل الدخول",

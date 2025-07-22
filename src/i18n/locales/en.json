@@ -30,7 +30,9 @@
     "contact": "Contact",
     "logout": "Logout",
     "signIn": "Sign In",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "gauss": "Gauss",
+    "platform": "Platform"
   },
   "auth": {
     "login": "Login",
