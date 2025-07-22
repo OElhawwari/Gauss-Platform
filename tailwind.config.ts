@@ -127,6 +127,16 @@ const config: Config = {
             transform: "translateX(0)" 
           },
         },
+        "slide-in-rtl": {
+          from: { 
+            opacity: "0", 
+            transform: "translateX(20px)" 
+          },
+          to: { 
+            opacity: "1", 
+            transform: "translateX(0)" 
+          },
+        },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
@@ -145,6 +155,7 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out",
         "slide-in": "slide-in 0.6s ease-out",
+        "slide-in-rtl": "slide-in-rtl 0.6s ease-out",
         float: "float 6s ease-in-out infinite",
         "pulse-slow": "pulse 2s ease-in-out infinite",
         shimmer: "shimmer 2s ease-in-out infinite",
@@ -158,11 +169,14 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        arabic: ['Cairo', 'system-ui', 'sans-serif'],
+        arabic: ['Cairo', 'Tajawal', 'system-ui', 'sans-serif'],
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-rtl")
+  ],
 } satisfies Config
 
 export default config

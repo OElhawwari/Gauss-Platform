@@ -5,8 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { ArrowLeft } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const Login = () => {
+  const { t } = useTranslation()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center py-20">
       <div className="container mx-auto px-4">
@@ -19,35 +21,35 @@ const Login = () => {
           <Link to="/">
             <Button variant="ghost" className="mb-8">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
+              {t('auth.backToHome')}
             </Button>
           </Link>
           
           <Card className="modern-card">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Welcome Back
+              <CardTitle className="text-2xl text-primary">
+                {t('auth.welcome')}
               </CardTitle>
               <CardDescription>
-                Sign in to your Gauss Platform account
+                {t('auth.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="Enter your email" />
+                <Label htmlFor="email">{t('auth.email')}</Label>
+                <Input id="email" type="email" placeholder={t('auth.emailPlaceholder')} />
               </div>
               <div>
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" placeholder="Enter your password" />
+                <Label htmlFor="password">{t('auth.password')}</Label>
+                <Input id="password" type="password" placeholder={t('auth.passwordPlaceholder')} />
               </div>
               <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                Sign In
+                {t('auth.signIn')}
               </Button>
               <p className="text-center text-sm text-gray-600">
-                Don't have an account?{' '}
+                {t('auth.dontHaveAccount')}
                 <Link to="/register" className="text-primary hover:underline">
-                  Sign up
+                  {t('auth.signUp')}
                 </Link>
               </p>
             </CardContent>

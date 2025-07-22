@@ -15,7 +15,7 @@ const Contact = lazy(() => import('./pages/Contact'))
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 font-cairo">
       {/* Background Pattern */}
       <div className="fixed inset-0 bg-hero-pattern opacity-30 pointer-events-none" />
       

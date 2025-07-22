@@ -5,8 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { ArrowLeft } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const Register = () => {
+  const { t } = useTranslation()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center py-20">
       <div className="container mx-auto px-4">
@@ -19,39 +21,39 @@ const Register = () => {
           <Link to="/">
             <Button variant="ghost" className="mb-8">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
+              {t('auth.backToHome')}
             </Button>
           </Link>
           
           <Card className="modern-card">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Join Gauss Platform
+              <CardTitle className="text-2xl text-primary">
+                {t('auth.register')}
               </CardTitle>
               <CardDescription>
-                Create your account and start learning
+                {t('auth.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label htmlFor="name">Full Name</Label>
-                <Input id="name" type="text" placeholder="Enter your full name" />
+                <Label htmlFor="name">{t('auth.fullName')}</Label>
+                <Input id="name" type="text" placeholder={t('auth.fullNamePlaceholder')} />
               </div>
               <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="Enter your email" />
+                <Label htmlFor="email">{t('auth.email')}</Label>
+                <Input id="email" type="email" placeholder={t('auth.emailPlaceholder')} />
               </div>
               <div>
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" placeholder="Create a password" />
+                <Label htmlFor="password">{t('auth.password')}</Label>
+                <Input id="password" type="password" placeholder={t('auth.passwordPlaceholder')} />
               </div>
               <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                Create Account
+                {t('auth.createAccount')}
               </Button>
               <p className="text-center text-sm text-gray-600">
-                Already have an account?{' '}
+                {t('auth.alreadyHaveAccount')}
                 <Link to="/login" className="text-primary hover:underline">
-                  Sign in
+                  {t('auth.signIn')}
                 </Link>
               </p>
             </CardContent>

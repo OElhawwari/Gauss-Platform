@@ -1,0 +1,196 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "dashboard": "Dashboard",
+    "lessons": "Lessons",
+    "login": "Login",
+    "register": "Register",
+    "contact": "Contact",
+    "logout": "Logout",
+    "signIn": "Sign In",
+    "getStarted": "Get Started"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "welcome": "Welcome Back",
+    "description": "Sign in to your Gauss Platform account",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "backToHome": "Back to Home",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?"
+  },
+  "home": {
+    "title": "Master Math with",
+    "subtitle": "Intelligent Learning",
+    "description": "Experience the future of mathematics education with our AI-powered platform that adapts to your learning style and makes complex concepts simple.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": "Features",
+    "testimonials": "Testimonials",
+    "hero": {
+      "badge": "AI-Powered Math Learning Platform",
+      "title1": "Master Math with",
+      "title2": "Intelligent Learning",
+      "description": "Experience the future of mathematics education with our AI-powered platform that adapts to your learning style and makes complex concepts simple.",
+      "startLearning": "Start Learning Free",
+      "watchDemo": "Watch Demo",
+      "demoTitle": "Interactive Math Visualization Demo"
+    },
+    "stats": {
+      "students": "Students Learning",
+      "problems": "Math Problems",
+      "success": "Success Rate",
+      "support": "AI Support"
+    },
+    "features": {
+      "title": "Why Choose Gauss Platform?",
+      "subtitle": "Our cutting-edge technology and pedagogical expertise combine to create the most effective math learning experience.",
+      "adaptive": {
+        "title": "Adaptive Learning",
+        "description": "AI-powered lessons that adapt to your unique learning style and pace for optimal understanding."
+      },
+      "interactive": {
+        "title": "Interactive Visualizations",
+        "description": "Stunning 3D math visualizations and interactive problem-solving tools to make abstract concepts clear."
+      },
+      "gamified": {
+        "title": "Gamified Progress",
+        "description": "Earn achievements, unlock new levels, and track your progress with our engaging gamification system."
+      },
+      "bilingual": {
+        "title": "Bilingual Support",
+        "description": "Full Arabic and English language support for inclusive learning across different cultures."
+      }
+    },
+    "testimonials": {
+      "title": "What Our Students Say?",
+      "sarah": {
+        "name": "Sarah Ahmed",
+        "role": "High School Student",
+        "content": "Gauss Platform made calculus actually enjoyable! The visualizations helped me understand derivatives in a way textbooks never could."
+      },
+      "mohammed": {
+        "name": "Dr. Mohammed Hassan",
+        "role": "Mathematics Professor",
+        "content": "I recommend Gauss Platform to all my students. The adaptive learning technology is revolutionary."
+      },
+      "lisa": {
+        "name": "Lisa Chen",
+        "role": "Parent",
+        "content": "My daughter's confidence in math has skyrocketed since using Gauss Platform. The progress tracking is fantastic."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Math Skills?",
+      "description": "Join thousands of students who have already revolutionized their learning with Gauss Platform.",
+      "startTrial": "Start Free Trial",
+      "contactSales": "Contact Sales"
+    },
+    "footer": {
+      "description": "Revolutionizing mathematics education through intelligent learning technology.",
+      "product": "Product",
+      "company": "Company",
+      "support": "Support",
+      "pricing": "Pricing",
+      "careers": "Careers",
+      "helpCenter": "Help Center",
+      "community": "Community",
+      "status": "Status",
+      "copyright": "© 2025 Gauss Platform. All rights reserved.",
+      "about": "About",
+      "contact": "Contact",
+      "lessons": "Lessons",
+      "dashboard": "Dashboard",
+      "pricing": "Pricing",
+      "careers": "Careers",
+      "helpCenter": "Help Center"
+    }
+  },
+  "about": {
+    "title": "About Gauss Platform",
+    "description": "Learn more about our mission and vision",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "team": "Our Team",
+    "text1": "Gauss Platform is revolutionizing mathematics education through intelligent learning technology.",
+    "text2": "We believe that every student can master math when provided with personalized, interactive, and adaptive learning experiences.",
+    "text3": "Our platform combines cutting-edge AI technology with proven pedagogical methods to create a learning environment that adapts to each student's unique needs, pace, and learning style.",
+    "text4": "More content coming soon...",
+    "backToHome": "Back to Home"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back!",
+    "progress": "Progress",
+    "recentLessons": "Recent Lessons",
+    "achievements": "Achievements",
+    "statistics": "Statistics",
+    "comingSoon": "Dashboard features coming soon...",
+    "backToHome": "Back to Home",
+    "description": "Your personalized learning dashboard will be available here."
+  },
+  "lessons": {
+    "title": "Lessons",
+    "allLessons": "All Lessons",
+    "myLessons": "My Lessons",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "notStarted": "Not Started",
+    "difficulty": "Difficulty",
+    "duration": "Duration",
+    "startLesson": "Start Lesson",
+    "continueLesson": "Continue Lesson",
+    "backToHome": "Back to Home",
+    "description": "Interactive math lessons with AI-powered personalization.",
+    "comingSoon": "Lesson content coming soon..."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with our team",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "phone": "Phone",
+    "address": "Address",
+    "comingSoon": "Contact form coming soon...",
+    "backToHome": "Back to Home"
+  }
+}
+

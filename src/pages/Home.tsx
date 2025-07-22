@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
-  BookOpen,
-  Users,
   Star,
   PlayCircle,
   Brain,
   Zap,
   Target,
   Shield,
-  Award,
-  ChevronDown,
   Leaf,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,6 +21,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/hooks/useLanguage";
 import img from "../assets/math-bg.jpg";
 
 // CountUp Animation Component
@@ -74,6 +73,7 @@ const CountUp = ({ target, suffix = "", duration = 2000, isVisible = false }: Co
 };
 
 const Home = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [statsInView, setStatsInView] = useState(false);
 
@@ -103,57 +103,50 @@ const Home = () => {
   const features = [
     {
       icon: Brain,
-      title: "Adaptive Learning",
-      description:
-        "AI-powered lessons that adapt to your unique learning style and pace for optimal understanding.",
+      title: t('home.features.adaptive.title'),
+      description: t('home.features.adaptive.description'),
     },
     {
       icon: Zap,
-      title: "Interactive Visualizations",
-      description:
-        "Stunning 3D math visualizations and interactive problem-solving tools to make abstract concepts clear.",
+      title: t('home.features.interactive.title'),
+      description: t('home.features.interactive.description'),
     },
     {
       icon: Target,
-      title: "Gamified Progress",
-      description:
-        "Earn achievements, unlock new levels, and track your progress with our engaging gamification system.",
+      title: t('home.features.gamified.title'),
+      description: t('home.features.gamified.description'),
     },
     {
       icon: Shield,
-      title: "Bilingual Support",
-      description:
-        "Full Arabic and English language support for inclusive learning across different cultures.",
+      title: t('home.features.bilingual.title'),
+      description: t('home.features.bilingual.description'),
     },
   ];
 
   const stats = [
-    { number: 50, suffix: "K+", label: "Students Learning" },
-    { number: 1000, suffix: "+", label: "Math Problems" },
-    { number: 95, suffix: "%", label: "Success Rate" },
-    { number: 24, suffix: "/7", label: "AI Support" },
+    { number: 50, suffix: "K+", label: t('home.stats.students') },
+    { number: 1000, suffix: "+", label: t('home.stats.problems') },
+    { number: 95, suffix: "%", label: t('home.stats.success') },
+    { number: 24, suffix: "/7", label: t('home.stats.support') },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Ahmed",
-      role: "High School Student",
-      content:
-        "Gauss Platform made calculus actually enjoyable! The visualizations helped me understand derivatives in a way textbooks never could.",
+      name: t('home.testimonials.sarah.name'),
+      role: t('home.testimonials.sarah.role'),
+      content: t('home.testimonials.sarah.content'),
       rating: 5,
     },
     {
-      name: "Dr. Mohammed Hassan",
-      role: "Mathematics Professor",
-      content:
-        "I recommend Gauss Platform to all my students. The adaptive learning technology is revolutionary.",
+      name: t('home.testimonials.mohammed.name'),
+      role: t('home.testimonials.mohammed.role'),
+      content: t('home.testimonials.mohammed.content'),
       rating: 4,
     },
     {
-      name: "Lisa Chen",
-      role: "Parent",
-      content:
-        "My daughter's confidence in math has skyrocketed since using Gauss Platform. The progress tracking is fantastic.",
+      name: t('home.testimonials.lisa.name'),
+      role: t('home.testimonials.lisa.role'),
+      content: t('home.testimonials.lisa.content'),
       rating: 5,
     },
   ];
@@ -164,7 +157,7 @@ const Home = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-olive backdrop-blur-lg border-b border-primary-200/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 me-2">
               <div className="relative p-3 rounded-2xl olive-gradient group-hover:shadow-lg group-hover:shadow-primary-200 transition-all duration-300">
                 <Leaf className="h-7 w-7 text-white" />
               </div>
@@ -178,39 +171,40 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center justify-between space-x-8 gap-8 ">
               <Link
                 to="/about"
                 className="text-sage-700 hover:text-primary-700 transition-colors font-medium"
               >
-                About
+                {t('navigation.about')}
               </Link>
               <Link
                 to="/lessons"
                 className="text-sage-700 hover:text-primary-700 transition-colors font-medium"
               >
-                Lessons
+                {t('navigation.lessons')}
               </Link>
               <Link
                 to="/contact"
                 className="text-sage-700 hover:text-primary-700 transition-colors font-medium"
               >
-                Contact
+                {t('navigation.contact')}
               </Link>
             </div>
 
             <div className="flex items-center space-x-4">
+              <LanguageSwitcher />
               <Link to="/login">
                 <Button
                   variant="ghost"
                   className="text-sage-700 hover:text-primary-700 hover:bg-primary-50"
                 >
-                  Sign In
+                  {t('navigation.signIn')}
                 </Button>
               </Link>
               <Link to="/register">
                 <Button className="btn-olive-gradient border-0">
-                  Get Started
+                  {t('navigation.getStarted')}
                 </Button>
               </Link>
             </div>
@@ -227,18 +221,16 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Badge className="mb-6 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 border-primary-200">
-              AI-Powered Math Learning Platform
+              {t('home.hero.badge')}
             </Badge>
 
-            <div className="flex flex-col items-center justify-center text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <h1>Master Math with</h1>
-              <span className="text-gradient-olive">Intelligent Learning</span>
+            <div className="flex flex-col items-center justify-center text-4xl md:text-7xl font-bold mb-6 leading-tight">
+              <h1>{t('home.title')}</h1>
+              <span className="text-gradient-olive">{t('home.subtitle')}</span>
             </div>
 
             <p className="text-xl md:text-2xl text-sage-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of mathematics education with our AI-powered
-              platform that adapts to your learning style and makes complex
-              concepts simple.
+              {t('home.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -247,13 +239,13 @@ const Home = () => {
                   size="lg"
                   className="btn-olive-gradient text-lg px-8 py-6 border-0"
                 >
-                  Start Learning Free
+                  {t('home.getStarted')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Button size="lg" className="btn-outline-olive text-lg px-8 py-6">
                 <PlayCircle className="mr-2 h-5 w-5" />
-                Watch Demo
+                {t('home.learnMore')}
               </Button>
             </div>
           </motion.div>
@@ -312,13 +304,11 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose{" "}
-              <span className="text-gradient-olive">Gauss Platform?</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sage-700">
+              {t('home.features.title')}
             </h2>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto">
-              Our cutting-edge technology and pedagogical expertise combine to
-              create the most effective math learning experience.
+              {t('home.features.subtitle')}
             </p>
           </div>
 
@@ -355,8 +345,8 @@ const Home = () => {
       <section className="py-20 bg-primary-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              What Our <span className="text-gradient-olive">Students Say</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sage-700">
+              {t('home.testimonials.title')}
             </h2>
           </div>
 
@@ -401,11 +391,10 @@ const Home = () => {
       <section className="py-20 olive-gradient text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Math Skills?
+            {t('home.cta.title')}
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Join thousands of students who have already revolutionized their
-            learning with Gauss Platform.
+            {t('home.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/register">
@@ -414,7 +403,7 @@ const Home = () => {
                 variant="secondary"
                 className="text-lg px-8 py-6 bg-white text-primary-700 hover:bg-primary-50 border-0 font-semibold"
               >
-                Start Free Trial
+                {t('home.cta.startTrial')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -424,7 +413,7 @@ const Home = () => {
                 variant="outline"
                 className="text-lg px-8 py-6 text-white bg-primary-700 border-primary-700 hover:bg-white hover:text-primary-700 hover:border-white border-2 font-semibold"
               >
-                Contact Sales
+                {t('home.cta.contactSales')}
               </Button>
             </Link>
           </div>
@@ -446,19 +435,18 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-sm text-gray-400">
-                Revolutionizing mathematics education through intelligent
-                learning technology.
+                {t('home.footer.description')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Product</h4>
+              <h4 className="font-semibold text-white mb-4">{t('home.footer.product')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
                     to="/lessons"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Lessons
+                    {t('home.footer.lessons')}
                   </Link>
                 </li>
                 <li>
@@ -466,7 +454,7 @@ const Home = () => {
                     to="/dashboard"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Dashboard
+                    {t('home.footer.dashboard')}
                   </Link>
                 </li>
                 <li>
@@ -474,20 +462,20 @@ const Home = () => {
                     href="#"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Pricing
+                    {t('home.footer.pricing')}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <h4 className="font-semibold text-white mb-4">{t('home.footer.company')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
                     to="/about"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    About
+                    {t('home.footer.about')}
                   </Link>
                 </li>
                 <li>
@@ -495,7 +483,7 @@ const Home = () => {
                     to="/contact"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Contact
+                    {t('home.footer.contact')}
                   </Link>
                 </li>
                 <li>
@@ -503,20 +491,20 @@ const Home = () => {
                     href="#"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Careers
+                    {t('home.footer.careers')}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Support</h4>
+              <h4 className="font-semibold text-white mb-4">{t('home.footer.support')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
                     href="#"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Help Center
+                    {t('home.footer.helpCenter')}
                   </a>
                 </li>
                 <li>
@@ -524,7 +512,7 @@ const Home = () => {
                     href="#"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Community
+                    {t('home.footer.community')}
                   </a>
                 </li>
                 <li>
@@ -532,14 +520,14 @@ const Home = () => {
                     href="#"
                     className="hover:text-accent-400 transition-colors"
                   >
-                    Status
+                    {t('home.footer.status')}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-secondary-700 mt-8 pt-8 text-center text-sm">
-            <p>&copy; 2025 Gauss Platform. All rights reserved.</p>
+            <p>{t('home.footer.copyright')}</p>
           </div>
         </div>
       </footer>
